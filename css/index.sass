@@ -1,0 +1,238 @@
+$white: #ffffff
+$blue: #7FC9F0
+$black-blue: #223540
+$sea: #446B80
+$pink1: #ECC7C1
+$pink2: #FDF6EF
+$pink3: #DFC6B3
+
+@mixin montserrat-white
+  font-family: "Montserrat", sans-serif
+  font-optical-sizing: auto
+  font-style: normal
+  font-weight: 400
+  line-height: 100%
+  font-size: 18px
+  color: $white
+  letter-spacing: .05em
+
+@mixin montserrat-sea
+  font-family: "Montserrat", sans-serif
+  font-optical-sizing: auto
+  font-style: normal
+  font-weight: 400
+  line-height: 100%
+  font-size: 18px
+  color: $sea
+  letter-spacing: .05em
+
+@mixin montserrat-blue
+  font-family: "Montserrat", sans-serif
+  font-optical-sizing: auto
+  font-style: normal
+  font-weight: 400
+  line-height: 18px
+  font-size: 18px
+  color: $blue
+
+@mixin balsamiq-sea
+  font-family: 'Balsamiq Sans', sans-serif
+  font-weight: 400
+  font-size: 16px
+  line-height: 22px
+  color: $sea
+
+*,
+*::after,
+*::before
+  box-sizing: border-box
+
+a
+  text-decoration: none
+  transition: .3s
+  &:hover
+    opacity: 80%
+
+li
+  list-style: none
+
+button
+  padding: 0
+  background: none
+  border: none
+  cursor: pointer
+
+img
+  max-width: 100%
+
+.container
+  max-width: 1496px
+  display: flex
+  margin: 0 auto
+  padding: 0 20px
+
+.button
+  background-color: $blue
+  border: none
+  border-radius: 12px
+  display: flex
+  align-items: center
+  justify-content: center
+  padding: 0
+  @include montserrat-white
+  line-height: 24px
+  cursor: pointer
+  outline: none
+  transition: .3s
+
+  &:hover
+    background-color: rgba(127, 201, 240, .9)
+
+.header
+  padding-top: 17px
+  width: 100%
+  background-color: rgba(236, 199, 193, .16)
+
+  &__top
+    width: 100%
+    border-bottom: 1px solid rgba(34, 53, 64, .08)
+
+  &-top
+    width: 100%
+    display: flex
+    align-items: center
+    padding-bottom: 15px
+    position: relative
+  &-bottom
+    width: 100%
+    padding: 16px 0
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+  &__logo
+    margin-right: 44px
+  &__link
+    @include montserrat-sea
+    line-height: 24px
+    display: flex
+    align-items: center
+    &::before
+      content: ""
+      display: inline-block
+      width: 24px
+      height: 24px
+      background-repeat: no-repeat
+      background-size: cover
+      margin-right: 12px
+  &__catalog-btn
+    margin-right: 24px
+  &__autorization-link
+    margin-right: 80px
+    margin-left: auto
+
+.catalog-btn
+  width: 223px
+  height: 48px
+  gap: 11px
+
+  &_open
+    &::after
+      content: ""
+      display: inline-block
+      width: 24px
+      height: 24px
+      background-image: url(../images/catalog-btn_open.svg)
+      background-repeat: no-repeat
+      background-size: cover
+
+  &_close
+    background-color: $sea
+    &::after
+      content: ""
+      display: inline-block
+      width: 24px
+      height: 24px
+      background-image: url(../images/catalog-btn_close.svg)
+      translate: 0.3s
+      background-repeat: no-repeat
+      background-size: cover
+
+    &:hover::after
+      transform: rotate(45deg)
+
+  &-bottom
+    display: flex
+
+.search
+  display: flex
+  height: 48px
+  max-width: 470px
+  width: 100%
+  input
+    border: none
+    outline: none
+    background-color: rgba(34, 53, 64, 0)
+    flex-grow: 1
+    padding: 0 24px 0 0
+    @include montserrat-sea
+
+    &::placeholder
+      @include montserrat-sea
+      line-height: 24px
+      opacity: 64%
+
+  &__input
+    display: flex
+    align-items: center
+    border-radius: 12px
+    border-top-right-radius: 0
+    border-bottom-right-radius: 0
+    flex-grow: 1
+    background-color: rgba(34, 53, 64, .04%)
+  &__img
+    width: 24px
+    height: 24px
+    margin: 0 24px
+  &__btn
+    border-top-left-radius: 0
+    border-bottom-left-radius: 0
+    width: 108px
+
+.autorization-link
+  &::before
+    background-image: url(../images/autorization-link.svg)
+
+.basket-link
+  &::before
+    background-image: url(../images/basket.svg)
+
+.title
+  @include balsamiq-sea
+  letter-spacing: .02em
+  max-width: 164px
+
+.nav
+  &__list
+    display: flex
+    gap: 40px
+  &__link
+    @include montserrat-sea
+
+.location
+  @include montserrat-sea
+  display: flex
+  align-items: center
+  line-height: 24px
+  &::before
+    content: ''
+    display: inline-block
+    width: 24px
+    height: 24px
+    margin-right: 12px
+    background-image: url(../images/map-pin.svg)
+  &__link
+    @include montserrat-blue
+    
+    
+

@@ -18,7 +18,42 @@
 </head>
 
 <body>
-
+<!-- HEADER -->
+  <header class="header">
+    <div class="header__top">
+      <div class="container">
+        <div class="header-top">
+          <a href="#"><img class="logo header__logo" src="images/logo.svg" alt="Логотип"></a>
+          <button class="catalog-btn catalog-btn_open header__catalog-btn button">Каталог товаров</button>
+          <form class="search header__search" action="search.php" metod="get">
+            <div class="search__input">
+              <img class="search__img" src="images/search.svg" alt="Лупа">
+              <input type="text" name="q" placeholder="Я хочу купить...">
+            </div>
+            <button class="search__btn button" type="submit">Найти</button>
+          </form>
+          <a class="autorization-link header__link header__autorization-link" href="#">Войти в личный кабинет</a>
+          <a class="basket-link header__link" href="#">Корзина</a>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="header-bottom"><h1 class="title">Онлайн гипермаркет товаров для детей</h1>
+        <nav class="nav">
+          <ul class="nav__list">
+            <li><a class="nav__link" href="#">Акции</a></li>
+            <li><a class="nav__link" href="#">О нас</a></li>
+            <li><a class="nav__link" href="#">Блог</a></li>
+            <li><a class="nav__link" href="#">Оптовым клиентам</a></li>
+            <li><a class="nav__link" href="#">Возврат</a></li>
+            <li><a class="nav__link" href="#">Оплата и доставка</a></li>
+            <li><a class="nav__link" href="#">Контакты</a></li>
+          </ul>
+        </nav>
+        <span class="location">Город: <a class="location__link" href="#">Москва</a></span>
+      </div>
+    </div>
+  </header>
   <script src="js/script.js"></script>
 </body>
 
