@@ -588,6 +588,11 @@ img
 
 .footer
   padding: 56px 0 32px 0
+  &__container
+    display: grid
+    grid-template-columns: auto max-content
+    grid-template-rows: max-content auto
+
   &__top
     display: flex
 
@@ -601,13 +606,13 @@ img
     margin: 0
     padding: 0
     gap: 95px
-    margin-left: auto
+    padding: 0
   &__links-column
     display: flex
     flex-direction: column
-    margin: 0
-    padding: 0
     gap: 16px
+    padding: 0
+
   &__social
     flex-direction: row
     margin: 0
@@ -618,5 +623,9 @@ img
     @include montserrat-sea
     font-size: 18px
 
-  &__copyright
+  &__copyright,
+  &__user-agreement
     margin-top: 40px
+    @include montserrat-sea
+    font-size: 16px
+    opacity: 72%
