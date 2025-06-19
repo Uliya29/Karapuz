@@ -98,7 +98,7 @@ img
   transition: .3s
 
   &:hover
-    background-color: rgba(127, 201, 240, .9)
+    opacity: 90%
 
 .header
   padding-top: 17px
@@ -298,7 +298,8 @@ img
     padding: 28px
     border-radius: 12px
     box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.04)
-    
+    position: relative
+
   &__info
 
   &__title
@@ -326,8 +327,17 @@ img
   font-size: 24px
   line-height: 32px
   font-weight: 600
+  &::after
+    content: ""
+    display: inline-block
+    width: 11px
+    height: 18px
+    margin-left: 8px
+    background-image: url(../images/price.svg)
+    background-size: cover
+    background-repeat: no-repeat
 
-.button-basket
+.basket-btn
   width: 146px
   height: 48px
 
@@ -335,6 +345,10 @@ img
   height: 24px
   width: 24px
   transition: .3s
+  background-image: url(../images/heart.svg)
+  position: absolute
+  top: 24px
+  right: 24px
   &:hover
     opacity: 70%
 
@@ -351,7 +365,6 @@ img
     display: flex
     width: 100%
     gap: 20px
-    justify-content: space-between
     flex-wrap: wrap
   &__card
     width: 470px
@@ -400,3 +413,138 @@ img
   &__card-img
     max-width: 300px
     max-height: 100%
+
+.cards
+  display: flex
+  gap: 24px
+
+.card
+  display: flex
+  flex-direction: column
+  align-items: center
+  width: 346px
+  height: 510px
+  padding: 24px
+  position: relative
+  box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.04)
+
+  &__img
+    max-width: 274px
+    height: 240px
+    margin-bottom: 24px
+  &__title
+    @include balsamiq-sea
+    font-size: 18px
+    line-height: 28px
+    margin-bottom: 8px
+    max-width: 234px
+    text-align: center
+  &__price
+    margin-bottom: 24px
+  &__basket-btn
+    margin-bottom: 16px
+
+.arrows
+  display: flex
+  margin: 40px auto 0 auto
+  gap: 48px
+  width: max-content
+
+.arrow
+  width: 48px
+  height: 48px
+  background-size: cover
+  background-repeat: no-repeat
+  transition: .3s
+  &:hover
+    opacity: 90%
+
+  &-left
+    background-image: url(../images/arrow-left.svg)
+  &-right
+    background-image: url(../images/arrow-right.svg)
+
+.promotion
+  margin-top: 220px
+  box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.08)
+  padding-bottom: 87px
+  &__info
+  &__title
+    margin: 162px 0 48px 0
+    max-width: 810px
+  &__btn
+    width: 230px
+    height: 48px
+  &__img-container
+    display: flex
+    position: relative
+    flex-grow: 1
+    &::before
+      content: ""
+      height: 620px
+      width: 950px
+      background-image: url(../images/promotion-bg.svg)
+      background-size: cover
+      background-repeat: no-repeat
+      position: absolute
+      bottom: -87px
+      left: -300px
+      z-index: -1
+  &__img
+    position: absolute
+    bottom: -87px
+    left: 0
+
+.about
+  &__container
+    display: flex
+    flex-direction: column
+    width: 100%
+  &__title
+    font-size: 48px
+    line-height: 58px
+    text-align: center
+    display: flex
+    max-width: 966px
+    margin: 0 auto
+    margin-bottom: 64px
+
+  &__list
+    display: flex
+    gap: 24px
+    flex-wrap: wrap
+    padding: 0
+    margin: 0
+  &__item
+    display: flex
+    flex-direction: column
+    width: 346px
+    height: 296px
+    padding: 48px 23px 23px 23px
+    align-items: center
+    border: 1px solid $blue
+    border-radius: 12px
+  &__item-num
+    display: flex
+    font-family: "Balsamiq Sans", sans-serif
+    justify-content: center
+    align-items: center
+    color: $white
+    font-size: 48px
+    width: 80px
+    height: 80px
+    background-size: cover
+    background-repeat: no-repeat
+    margin-bottom: 32px
+    &:nth-child(1n)
+      background-image: url(../images/about-item-bg1.svg)
+    &:nth-child(2n)
+      background-image: url(../images/about-item-bg2.svg)
+    &:nth-child(3n)
+      background-image: url(../images/about-item-bg3.svg)
+    &:nth-child(4n)
+      background-image: url(../images/about-item-bg4.svg)
+  &__text
+    @include montserrat-sea
+    font-size: 24px
+    text-align: center
