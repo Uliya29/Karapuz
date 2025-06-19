@@ -25,14 +25,14 @@
         <div class="header-top">
           <a href="#"><img class="logo header__logo" src="images/logo.svg" alt="Логотип"></a>
           <button class="catalog-btn catalog-btn_open header__catalog-btn button">Каталог товаров</button>
-          <form class="search header__search" action="search.php" metod="get">
+          <form class="search header__search" action="search.php" method="get">
             <div class="search__input">
               <img class="search__img" src="images/search.svg" alt="Лупа">
               <input type="text" name="q" placeholder="Я хочу купить...">
             </div>
             <button class="search__btn button" type="submit">Найти</button>
           </form>
-          <a class="autorization-link header__link header__autorization-link" href="#">Войти в личный кабинет</a>
+          <button class="autorization-btn header__link header__autorization-btn">Войти в личный кабинет</button>
           <a class="basket-link header__link" href="#">Корзина</a>
         </div>
       </div>
@@ -74,7 +74,7 @@
     </div>
   </section>
 
-  <section class="promo section">
+  <section class="promo section" aria-label="Промо">
     <div class="container">
       <div class="promo-cards">
         <div class="promo__card">
@@ -140,6 +140,7 @@
           <img class="pop-categories__card-img" src="images/pop-categories-card3.png" alt="Детское автокресло">
         </div>
       </div>
+    </div>
   </section>
 
   <!-- NEW -->
@@ -338,22 +339,92 @@
     </div>
   </section>
 
-  <section class="partners section">
+  <section class="partners section" aria-label="Партнеры">
     <div class="container partners__container">
-        <button class="arrow arrow-left" aria-label="Влево"></button>
+      <button class="arrow arrow-left" aria-label="Влево"></button>
 
       <div class="partners__logos">
-        <img class="partners__logo" src="images/partner1.jpg" alt="Партнер">
-        <img class="partners__logo" src="images/partner2.jpg" alt="Партнер">
-        <img class="partners__logo" src="images/partner3.jpg" alt="Партнер">
-        <img class="partners__logo" src="images/partner4.jpg" alt="Партнер">
-        <img class="partners__logo" src="images/partner5.jpg" alt="Партнер">
+        <a href=""><img class="partners__logo" src="images/partner1.jpg" alt="Партнер"></a>
+        <a href=""><img class="partners__logo" src="images/partner2.jpg" alt="Партнер"></a>
+        <a href=""><img class="partners__logo" src="images/partner3.jpg" alt="Партнер"></a>
+        <a href=""><img class="partners__logo" src="images/partner4.jpg" alt="Партнер"></a>
+        <a href=""><img class="partners__logo" src="images/partner5.jpg" alt="Партнер"></a>
       </div>
 
-        <button class="arrow arrow-right" aria-label="Вправо"></button>
+      <button class="arrow arrow-right" aria-label="Вправо"></button>
 
     </div>
   </section>
+
+  <footer class="footer">
+    <div class="container column footer__container">
+      <div class="footer__top">
+        <div class="footer__logo">
+          <a href="#"><img class="logo" src="images/logo.svg" alt="Логотип"></a>
+          <h1 class="title">Онлайн гипермаркет товаров для детей</h1>
+        </div>
+
+        <ul class="footer__links">
+          <li>
+            <ul class="footer__links-column">
+              <li>
+                <a class="footer__link" href="#">О нас</a>
+              </li>
+              <li>
+                <a class="footer__link" href="#">Акции</a>
+              </li>
+              <li>
+                <a class="footer__link" href="#">Блог</a>
+              </li>
+              <li>
+                <a class="footer__link" href="#">Контакты</a>
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <ul class="footer__links-column">
+              <li>
+                <a class="footer__link" href="#">Возврат и гарантия</a>
+              </li>
+              <li>
+                <a class="footer__link" href="#">Оплата и доставка</a>
+              </li>
+            </ul>
+          </li>
+
+            <li>
+              <a class="footer__link" href="#">Оптовым клиентам</a>
+            </li>
+
+          <li>
+            <span class="footer__links-title">Мы в социальных сетях</span>
+            <ul  class="footer__links-column footer__social">
+              <li>
+                <a class="footer__link" href="#"><img src="images/instagram.svg" alt="Инстаграм"></a>
+              </li>
+              <li>
+                <a class="footer__link" href="#"><img src="images/whatsapp.svg" alt="Ватсап"></a>
+              </li>
+              <li>
+                <a class="footer__link" href="#"><img src="images/vk.svg" alt="ВКонтакте"></a>
+              </li>
+              <li>
+                <a class="footer__link" href="#"><img src="images/facebook.svg" alt="Фейсбук"></a>
+              </li>
+            </ul>
+
+          </li>
+        </ul>
+      </div>
+      <div class="footer__copyright">
+        <span class="copyright">Ⓒ 2020 karapuz05.ru</span>
+        <a class="user-agreement" href="#">Пользовательское соглашение/политика конфиденциальности</a>
+      </div>
+
+
+    </div>
+  </footer>
 
   <script src="js/script.js"></script>
 </body>
